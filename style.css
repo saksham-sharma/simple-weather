@@ -1,0 +1,82 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(rgb(47,150,163),rgb(48,62,143));
+	font-family: sans-serif;
+	color: white;
+}
+
+.location, 
+.temperature {
+	height: 30vh;
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.temperature {
+	flex-direction: column;
+}
+
+.degree-section {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.degree-section span {
+	margin: 10px;
+	font-size: 30px;
+}
+
+.degree-section h2 {
+	font-size: 40px;
+
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  font-size: 15px;
+  top: 0px;
+  left: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+  font-family: sans-serif;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
